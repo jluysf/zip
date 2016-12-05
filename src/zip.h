@@ -80,6 +80,7 @@ int zip_create(const char *zipname, const char *filenames[], size_t len);
 */
 int zip_extract(const char *zipname, const char *dir, int (* on_extract_entry)(const char *filename, void *arg), void *arg);
 
+int zip_extract_file_to_mem(const char *zipname, const char *entryname, void**output, unsigned long* output_size);
 #ifdef __cplusplus
 }
 #endif
