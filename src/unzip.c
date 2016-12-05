@@ -36,8 +36,8 @@ int main(int argc, char **argv) {
     }
 
     write(fd, out, out_size);
-
     close(fd);
 
+    free(out);
     return 0;
 }
